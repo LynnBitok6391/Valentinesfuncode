@@ -1,0 +1,45 @@
+:root { 
+  --bg-1: #ffe1e9; 
+  --bg-2: #ffd6f3; 
+  --bg-3: #e6f3ff; 
+  --red: #d32f2f; 
+}
+
+* { box-sizing: border-box; }
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, var(--bg-1), var(--bg-2), var(--bg-3));
+  background-size: 200% 200%;
+  animation: bgShift 12s ease-in-out infinite alternate;
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.container { text-align: center; max-width: 720px; padding: 24px; }
+
+.header_text {
+  font-size: 3em;
+  color: var(--red);
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid rgba(0,0,0,0.2);
+  animation: typing 3s steps(24, end), blink .9s step-end infinite alternate;
+}
+
+.subtitle { margin-top: 8px; color: #7a3c3c; font-weight: 600; }
+
+.gif_container img { width: 100%; max-width: 520px; height: auto; border-radius: 16px; margin-top: 18px; }
+
+.ambient { position: fixed; inset: 0; pointer-events: none; }
+.heart { position: fixed; bottom: -40px; opacity: 0.9; animation-name: floatUp; animation-timing-function: ease-in; color: #ff5a7b; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2)); }
+
+@keyframes typing { from { width: 0 } to { width: 100% } }
+@keyframes blink { 50% { border-color: transparent } }
+@keyframes bgShift { 0% { background-position: 0% 50% } 100% { background-position: 100% 50% } }
+@keyframes floatUp { 0% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0 } 10% { opacity: 0.9 } 100% { transform: translateY(-120vh) translateX(-20px) rotate(-20deg); opacity: 0 } }
+
+@media (max-width: 420px) { .header_text { font-size: 2.2em } }

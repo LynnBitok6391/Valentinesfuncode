@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knew you would say yes!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./yes_style.css">
+</head>
+<body>
+    <div class="ambient" aria-hidden="true"></div>
+    <div class="container" role="main">
+        <h1 class="header_text">Knew you would say yes!</h1>
+        <p class="subtitle">You make my heart do happy dances</p>
+        <div class="gif_container">
+            <img alt="Happy hug" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmo3c3l5ODh3ZGN6NHhhaDE2Mjg1ZjkwOXczdDFxbWM3dTBtaW9zaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/9XY4f3FgFTT4QlaYqa/giphy.gif">
+        </div>
+    </div>
+    <script>
+      function r(a,b){return Math.random()*(b-a)+a}
+      function mk(){const h=document.createElement('div');h.className='heart';h.textContent='❤';h.style.left=r(5,95)+'%';h.style.fontSize=r(16,28)+'px';h.style.animationDuration=r(3.5,6.5)+'s';document.querySelector('.ambient').appendChild(h);setTimeout(()=>h.remove(),7000)}
+      setInterval(mk, 1200)
+    </script>
+</body>
+</html>
